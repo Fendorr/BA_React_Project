@@ -6,12 +6,12 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
 
-import "./Navbar.css"
+import "./NavBar.css"
 
 function NavBar() {
     const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar); //toggles sidebar
+    const showSidebar = () => setSidebar(!sidebar);
 
     return (
         <>
@@ -23,21 +23,21 @@ function NavBar() {
                 </div>
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items" onClick={showSidebar}>
-                        <li className='navbar-toggle'>
-                            <Link to="#" className='menu-bars'>
+                        <li className="navbar-toggle">
+                            <Link to="#" className="menu-bars">
                                 <AiIcons.AiOutlineClose />
                             </Link>
                         </li>
-                        <li className='nav-text'>
+                        <li className="nav-text">
                             <Link to="/">
                                 <AiIcons.AiFillHome />
-                                <span>Home</span>
+                                <div className='text'>Home</div>
                             </Link>
                         </li>
-                        <li className='nav-text'>
+                        <li className="nav-text">
                             <Link to="/spaceholder">
                                 <AiIcons.AiFillHome />
-                                <span>Spaceholder</span>
+                                <div className='text'>Spaceholder</div>
                             </Link>
                         </li>
                     </ul>
