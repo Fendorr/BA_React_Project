@@ -21,7 +21,7 @@
     position: fixed;
     top: 0;
     left: -100%;
-    transition: 850ms;
+    transition: 350ms;
 }
 
 .nav-menu.active{
@@ -69,4 +69,19 @@
 
 .text {
     margin-left: 16px;
+}
+
+.title {
+    color: #f5f5f5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 28px;
+    padding: 0px 0px 8px 16px;
+    transition: 350ms;
+}
+
+.title.centered {
+    padding: 0px 0px 8px 200px;
+    transition: 350ms;
 }
