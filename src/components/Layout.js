@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 
+
 const Layout = () => {
 
     return(
