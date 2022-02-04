@@ -6,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
 
-import "./NavBar.css"
+import "./Navbar.css"
 
 function NavBar() {
     const [sidebar, setSidebar] = useState(false);
