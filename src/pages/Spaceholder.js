@@ -1,11 +1,20 @@
-import React from 'react';
+import {React, useState} from 'react';
 
-function Spaceholder() {
+
+function BindingExample() {
+
+    const [name, setName] = useState("");
+
+    const handleChange = (event) => {
+        setName(event.target.value);
+    }
+
     return (
-        <div className='spaceholder'>
-            <h1>Spaceholder</h1>
-        </div>
+        <>
+            <p>The name is: {name}</p>
+            <input value={name} onChange={handleChange}/>
+        </>
     );
 }
 
-export default Spaceholder;
+export default BindingExample;
