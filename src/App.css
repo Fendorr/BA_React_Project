@@ -1,16 +1,13 @@
 @import url("http://fonts.googleapis.com/css?family=Lato&display=swap");
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
 }
 
-.home, .spaceholder {
+html, body{
   display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+  width: 100%;
+  height: 100%;
 }
