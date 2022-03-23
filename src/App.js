@@ -1,10 +1,8 @@
-
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 import NavBar from './components/NavBar';
-import Home from "./pages/Home"
+import Grid from "./pages/Grid"
 import Spaceholder from "./pages/Spaceholder"
 
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<NavBar />}>
-            <Route index element={<Home />} />
+            <Route index element={<Grid />} />
             <Route path="/spaceholder" element={<Spaceholder />} />
           </Route>
         </Routes>
