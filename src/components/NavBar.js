@@ -22,7 +22,7 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HelpIcon from '@mui/icons-material/Help';
 
-
+//#region styling
 const drawerWidth = 240;
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -89,8 +89,7 @@ const closedMixin = (theme) => ({
         width: `calc(${theme.spacing(9)} + 1px)`,
     },
 });
-
-//TODO Styling auslagern 
+//#endregion
 
 function NavBar() {
     const theme = useTheme();
@@ -101,7 +100,8 @@ function NavBar() {
     }
 
     return (
-        <Box sx={{ display: 'flex' }}>
+
+        <Box sx={{ display: 'flex', overflow: "hidden", alignItems: "center" }}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -151,6 +151,7 @@ function NavBar() {
                 <Outlet />
             </Box>
         </Box>
+
     );
 
     // return (
