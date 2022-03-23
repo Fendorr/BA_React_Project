@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Link from '@mui/material/Link';
 
 //MUI
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
@@ -12,13 +12,13 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
+//Icons
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HelpIcon from '@mui/icons-material/Help';
 
@@ -92,7 +92,6 @@ const closedMixin = (theme) => ({
 //#endregion
 
 function NavBar() {
-    const theme = useTheme();
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = () => {
@@ -100,7 +99,6 @@ function NavBar() {
     }
 
     return (
-
         <Box sx={{ display: 'flex', overflow: "hidden", alignItems: "center" }}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
@@ -123,7 +121,7 @@ function NavBar() {
             <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
                     <IconButton onClick={toggleDrawer}>
-                        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                        <ChevronLeftIcon />
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
@@ -151,7 +149,6 @@ function NavBar() {
                 <Outlet />
             </Box>
         </Box>
-
     );
 
     // return (
