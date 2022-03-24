@@ -1,20 +1,19 @@
 import {React, useState} from 'react';
 
-
-function BindingExample() {
-
+function SeperateBindingExample (){
     const [name, setName] = useState("");
 
     const handleChange = (event) => {
         setName(event.target.value);
     }
 
-    return (
+    return(
         <>
             <p>The name is: {name}</p>
-            <input value={name} onChange={handleChange}/>
+            <input value={name} onChange={handleChange} />
         </>
-    );
+    )
+
 }
 
-export default BindingExample;
+export default SeperateBindingExample;

@@ -21,6 +21,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HelpIcon from '@mui/icons-material/Help';
+import EditIcon from '@mui/icons-material/Edit';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 
 //#region styling
 const drawerWidth = 240;
@@ -131,15 +133,23 @@ function NavBar() {
                             <ListItemIcon>
                                 <DashboardIcon />
                             </ListItemIcon>
-                            <ListItemText>Home</ListItemText>
+                            <ListItemText>Responsive Grid</ListItemText>
                         </ListItem>
                     </Link>
-                    <Link href="/spaceholder" underline="none" color="inherit">
+                    <Link href="/forms" underline="none" color="inherit">
                         <ListItem button>
                             <ListItemIcon>
-                                <HelpIcon />
+                                <EditIcon />
                             </ListItemIcon>
-                            <ListItemText>Spaceholder</ListItemText>
+                            <ListItemText>Forms</ListItemText>
+                        </ListItem>
+                    </Link>
+                    <Link href="/bindings" underline="none" color="inherit">
+                        <ListItem button>
+                            <ListItemIcon>
+                                <CompareArrowsIcon />
+                            </ListItemIcon>
+                            <ListItemText>Bindings</ListItemText>
                         </ListItem>
                     </Link>
                 </List>
