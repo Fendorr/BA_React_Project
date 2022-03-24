@@ -58,14 +58,31 @@ function GridExample() {
                 <Grid item xs={12} sm={5}>
                     <ResponsiveImg src={robbenbaby1} />
                 </Grid>
+
                 <Grid item xs={12} sm={6}>
+                    <Grid container direction="column" style={{height: "100%"}}>
+                        <Grid item sm={6} paddingBottom={2}>
+                            <ResponsiveImg  src={doggo2}/>
+                        </Grid>
+                        <Grid item sm={6}>
+                            <ResponsiveImg  src={robbenbaby4} />
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <ResponsiveImg src={doggo5} />
+                </Grid>
+
+                <Grid item xs={12} sm={4}>
+                    <ResponsiveImg src={doggo4} />
+                </Grid>
+                <Grid item xs={6} sm={4}>
                     <ResponsiveImg src={robbenbaby2} />
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <ResponsiveImg src={doggo2} />
+                <Grid item xs={6} sm={4}>
+                    <ResponsiveImg src={doggo3} />
                 </Grid>
             </CustomGrid>
-
         </Box>
     );
 }
