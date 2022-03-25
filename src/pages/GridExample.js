@@ -36,6 +36,7 @@ function GridExample() {
         <Box sx={{
             display: "flex",
             flexDirection: "column",
+            height: "100%",
         }}>
             <h1>Dynamic columns and grid showcase</h1>
             <p>Resize the window to see the React-MUI grid in action</p>

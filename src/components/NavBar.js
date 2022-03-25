@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Grid from '@mui/material/Grid';
 
 //Icons
 import MenuIcon from '@mui/icons-material/Menu';
@@ -40,6 +41,8 @@ const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: "#f5f5f5",
+    color: "black",
     transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -57,6 +60,7 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme, open }) => ({
         width: drawerWidth,
+        height: "100%",
         flexShrink: 0,
         whiteSpace: 'nowrap',
         boxSizing: 'border-box',
@@ -101,7 +105,7 @@ function NavBar() {
     }
 
     return (
-        <Box sx={{ display: 'flex', overflow: "hidden", alignItems: "center" }}>
+        <Box sx={{ display: 'flex', alignItems: "center" }}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -154,9 +158,11 @@ function NavBar() {
                     </Link>
                 </List>
             </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
-                <Outlet />
+            <Box sx={{ flexGrow: 1, p: 3 }}>
+                <Grid container direction="column" justifyContent="flex-start" alignItems="center">
+                    <DrawerHeader />
+                    <Outlet />
+                </Grid>
             </Box>
         </Box>
     );
