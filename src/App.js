@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from './components/NavBar';
 import GridExample from "./pages/GridExample"
-import Spaceholder from "./pages/Spaceholder"
+import Bindings from "./pages/Bindings"
+import Forms from "./pages/Forms"
 
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -15,7 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<NavBar />}>
             <Route index element={<GridExample />} />
-            <Route path="/spaceholder" element={<Spaceholder />} />
+            <Route path="/forms" element={<Forms />} />
+            <Route path="/bindings" element={<Bindings />} />
           </Route>
         </Routes>
       </Router>
