@@ -13,6 +13,7 @@ import robbenbaby1 from "../images/robbenbaby1.jpg";
 import robbenbaby2 from "../images/robbenbaby2.jpg";
 import robbenbaby3 from "../images/robbenbaby3.jpg";
 import robbenbaby4 from "../images/robbenbaby4.jpg";
+import { Typography } from '@mui/material';
 
 //#region styling
 const CustomGrid = styled(Grid)({
@@ -36,10 +37,9 @@ function GridExample() {
         <Box sx={{
             display: "flex",
             flexDirection: "column",
-            height: "100%",
         }}>
-            <h1>Dynamic columns and grid showcase</h1>
-            <p>Resize the window to see the React-MUI grid in action</p>
+            <Typography variant="h4" sx={{ fontWeight: 600 }}>Dynamic columns and grid showcase</Typography>
+            <Typography variant="subtitle1">Resize the window to see the React-MUI grid in action</Typography>
             <CustomGrid container spacing={2}>
                 <Grid item xs={12} sm={4}>
                     {text}
