@@ -6,12 +6,9 @@ import GridExample from "./pages/GridExample"
 import Bindings from "./pages/Bindings"
 import Forms from "./pages/Forms"
 
-import CssBaseline from '@mui/material/CssBaseline';
-
 function App() {
   return (
     <>
-      <CssBaseline />
       <Router>
         <Routes>
           <Route path="/" element={<NavBar />}>

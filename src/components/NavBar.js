@@ -37,6 +37,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     ...theme.mixins.toolbar,
 }));
 
+//in this case "open" refers to the drawer being open, because the AppBar has to change width dependently
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
@@ -90,10 +91,7 @@ const closedMixin = (theme) => ({
         duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: `calc(${theme.spacing(7)} + 1px)`,
-    [theme.breakpoints.up('sm')]: {
-        width: `calc(${theme.spacing(9)} + 1px)`,
-    },
+    width: `calc(${theme.spacing(7)})`,
 });
 //#endregion
 
@@ -105,7 +103,7 @@ function NavBar() {
     }
 
     return (
-        <Box sx={{ display: 'flex', alignItems: "center" }}>
+        <Box sx={{ display: 'flex'}}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
