@@ -11,7 +11,7 @@ const CustomButton = styled(Button)({
 
 function HTTPRequests() {
     const url = "dummyData.json"
-    const [error, setError] = useState(null);
+    const [error, setError] = useState("");
     const [items, setItems] = useState([]);
 
     const getData = () => {
@@ -22,8 +22,7 @@ function HTTPRequests() {
                     console.log('response data?', data)
                     setItems(data);
                 } catch (error) {
-                    console.log('Error happened here!')
-                    setError(error);
+                    setError("Error happened where it shouldn`t!");
                 }
             })
     }
@@ -37,14 +36,14 @@ function HTTPRequests() {
                     console.log('response data?', data)
                     setItems(data);
                 } catch (error) {
-                    console.log('Error happened here!')
-                    setError(error);
+                    setError("We tried to access /not/a/real/url which doesn`t exist, therefore the error is thrown. "
+                        + "Check the console for more information");
                 }
             })
     }
 
     const clear = () => {
-        setError(null);
+        setError("");
         setItems([]);
     }
 
@@ -79,8 +78,8 @@ function HTTPRequests() {
                 </ul>
             }
 
-            {error !== null &&
-                <div>Error: {error.message}</div>
+            {error !== "" &&
+                <div>Error: {error}</div>
             }
         </Box>
     );
