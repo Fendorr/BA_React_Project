@@ -24,6 +24,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import EditIcon from '@mui/icons-material/Edit';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 import HttpIcon from '@mui/icons-material/Http';
+import { NavItems } from './NavItems';
 
 //#region styling
 const drawerWidth = 240;
@@ -102,8 +103,21 @@ function NavBar() {
         setOpen(!open);
     }
 
+    const renderIcon = (param) => {
+        switch (param) {
+            case "DashboardIcon":
+                return <DashboardIcon />;
+            case "EditIcon":
+                return <EditIcon />;
+            case "SwapVertIcon":
+                return <SwapVertIcon />;
+            case "HttpIcon":
+                return <HttpIcon />
+        }
+    }
+
     return (
-        <Box sx={{ display: 'flex'}}>
+        <Box sx={{ display: 'flex' }}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -130,43 +144,23 @@ function NavBar() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <Link href="/" underline="none" color="inherit">
-                        <ListItem button>
-                            <ListItemIcon>
-                                <DashboardIcon />
-                            </ListItemIcon>
-                            <ListItemText>Responsive Grid</ListItemText>
-                        </ListItem>
-                    </Link>
-                    <Link href="/forms" underline="none" color="inherit">
-                        <ListItem button>
-                            <ListItemIcon>
-                                <EditIcon />
-                            </ListItemIcon>
-                            <ListItemText>Forms</ListItemText>
-                        </ListItem>
-                    </Link>
-                    <Link href="/bindings" underline="none" color="inherit">
-                        <ListItem button>
-                            <ListItemIcon>
-                                <SwapVertIcon />
-                            </ListItemIcon>
-                            <ListItemText>Bindings</ListItemText>
-                        </ListItem>
-                    </Link>
-                    <Link href="/http" underline="none" color="inherit">
-                        <ListItem button>
-                            <ListItemIcon>
-                                <HttpIcon />
-                            </ListItemIcon>
-                            <ListItemText>HTTP-Requests</ListItemText>
-                        </ListItem>
-                    </Link>
+                    {NavItems.map(item => {
+                        return (
+                            <Link href={item.path} underline="none" color="inherit">
+                                <ListItem button>
+                                    <ListItemIcon>
+                                        {renderIcon(item.icon)}
+                                    </ListItemIcon>
+                                    <ListItemText>{item.text}</ListItemText>
+                                </ListItem>
+                            </Link>
+                        )
+                    })}
                 </List>
             </Drawer>
             <Box sx={{ flexGrow: 1, p: 3 }}>
+                <DrawerHeader />
                 <Grid container direction="column" justifyContent="flex-start" alignItems="center">
-                    <DrawerHeader />
                     <Outlet />
                 </Grid>
             </Box>
