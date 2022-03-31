@@ -25,13 +25,19 @@ const GridBox = styled(Box)(({ theme }) => ({
     alignItems: "flex",
     justifyContent: "center",
     gap: 2,
+    marginTop: "20px",
     [theme.breakpoints.down("md")]: {
         flexDirection: "column",
     }
 }));
 
 const FormButton = styled(Button)({
-    backgroundColor: "grey",
+    color: "rgba(0,0,0,.87)",
+    backgroundColor: "#fff",
+    textTransform: "none",
+    '&:hover': {
+        backgroundColor: '#fff',
+    }
 })
 //#endregion
 
@@ -82,7 +88,7 @@ function Forms() {
                                 <TextField label="Age" name="age" type="number" variant="filled" value={inputs.age || ""} onChange={handleInputChange} margin="dense" fullWidth />
                             </div>
                             <br />
-                            <p>The value of isSubmitted is: {isSubmitted.toString()}</p>
+                            <p>isSubmitted: {isSubmitted.toString()}</p>
                             <FormButton type="submit" variant="contained">Submit</FormButton>
                         </form>
                     </CardContent>
@@ -97,7 +103,7 @@ function Forms() {
                             <p>firstName: {inputs.firstName}</p>
                             <p>lastName: {inputs.lastName}</p>
                             <p>age: {inputs.age}</p>
-                            <FormButton variant="contained" onClick={resetForm}>reset</FormButton>
+                            <FormButton variant="contained" onClick={resetForm}>Reset</FormButton>
                             <CardDivider />
                             <h4>OBACHT!</h4>
                             <p>Resetting the form is usually done while submitting, so the submitted values cant be changed afterwards.</p>

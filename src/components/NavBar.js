@@ -21,9 +21,9 @@ import Grid from '@mui/material/Grid';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import HelpIcon from '@mui/icons-material/Help';
 import EditIcon from '@mui/icons-material/Edit';
-import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import SwapVertIcon from '@mui/icons-material/SwapVert';
+import HttpIcon from '@mui/icons-material/Http';
 
 //#region styling
 const drawerWidth = 240;
@@ -149,7 +149,7 @@ function NavBar() {
                     <Link href="/bindings" underline="none" color="inherit">
                         <ListItem button>
                             <ListItemIcon>
-                                <CompareArrowsIcon />
+                                <SwapVertIcon />
                             </ListItemIcon>
                             <ListItemText>Bindings</ListItemText>
                         </ListItem>
@@ -157,7 +157,7 @@ function NavBar() {
                     <Link href="/http" underline="none" color="inherit">
                         <ListItem button>
                             <ListItemIcon>
-                                <CompareArrowsIcon />
+                                <HttpIcon />
                             </ListItemIcon>
                             <ListItemText>HTTP-Requests</ListItemText>
                         </ListItem>
@@ -172,41 +172,6 @@ function NavBar() {
             </Box>
         </Box>
     );
-
-    // return (
-    //     <>
-    //         <IconContext.Provider value={{ color: "#fff" }}>
-    //             <div className="navbar">
-    //                 <Link to="#" className="menu-bars">
-    //                     <FaIcons.FaBars onClick={toggleExpanded} />
-    //                 </Link>
-    //             </div>
-    //             <nav className={expanded ? "nav-menu active" : "nav-menu"}>
-    //                 <ul className="nav-menu-items" onClick={toggleExpanded}>
-    //                     <li className='navbar-toggle'>
-    //                         <Link to="#" className='menu-bars'>
-    //                             <AiIcons.AiOutlineClose />
-    //                         </Link>
-    //                     </li>
-    //                     <li className='nav-text'>
-    //                         <Link to="/">
-    //                             <AiIcons.AiFillHome />
-    //                             <span>Home</span>
-    //                         </Link>
-    //                     </li>
-    //                     <li className='nav-text'>
-    //                         <Link to="/spaceholder">
-    //                             <AiIcons.AiFillHome />
-    //                             <span>Spaceholder</span>
-    //                         </Link>
-    //                     </li>
-    //                 </ul>
-    //             </nav>
-
-    //             <Outlet />
-    //         </IconContext.Provider>
-    //     </>
-    // )
 }
 
 export default NavBar;
