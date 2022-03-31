@@ -154,6 +154,14 @@ function NavBar() {
                             <ListItemText>Bindings</ListItemText>
                         </ListItem>
                     </Link>
+                    <Link href="/http" underline="none" color="inherit">
+                        <ListItem button>
+                            <ListItemIcon>
+                                <CompareArrowsIcon />
+                            </ListItemIcon>
+                            <ListItemText>HTTP-Requests</ListItemText>
+                        </ListItem>
+                    </Link>
                 </List>
             </Drawer>
             <Box sx={{ flexGrow: 1, p: 3 }}>
