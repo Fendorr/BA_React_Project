@@ -1,9 +1,10 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
-//img
+//#region img-imports
 import doggo1 from "../images/doggo1.jpg";
 import doggo2 from "../images/doggo2.jpg";
 import doggo3 from "../images/doggo3.webp";
@@ -11,9 +12,8 @@ import doggo4 from "../images/doggo4.jpg";
 import doggo5 from "../images/doggo5.jpeg";
 import robbenbaby1 from "../images/robbenbaby1.jpg";
 import robbenbaby2 from "../images/robbenbaby2.jpg";
-import robbenbaby3 from "../images/robbenbaby3.jpg";
 import robbenbaby4 from "../images/robbenbaby4.jpg";
-import { Typography } from '@mui/material';
+//#endregion
 
 //#region styling
 const CustomGrid = styled(Grid)({

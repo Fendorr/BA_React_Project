@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -24,7 +24,7 @@ const GridBox = styled(Box)(({ theme }) => ({
     flexDirection: "row",
     alignItems: "flex",
     justifyContent: "center",
-    gap: 2,
+    gap: 10,
     marginTop: "20px",
     [theme.breakpoints.down("md")]: {
         flexDirection: "column",
