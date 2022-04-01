@@ -144,9 +144,9 @@ function NavBar() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {NavItems.map(item => {
+                    {NavItems.map((item, index) => {
                         return (
-                            <Link href={item.path} underline="none" color="inherit">
+                            <Link key={index} href={item.path} underline="none" color="inherit">
                                 <ListItem button>
                                     <ListItemIcon>
                                         {renderIcon(item.icon)}

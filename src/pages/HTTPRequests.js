@@ -1,4 +1,4 @@
-import { React, useState} from "react";
+import { React, useState } from "react";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button";
@@ -32,32 +32,42 @@ function HTTPRequests() {
     const [error, setError] = useState("");
     const [items, setItems] = useState([]);
 
+    // const getData = () => {
+    //     fetch("dummyData.json")
+    //         .then(async response => await response.json())
+    //         .then(data => console.log(data));
+    // }
+
     const getData = () => {
         fetch(url)
-            .then(async response => {
-                try {
-                    const data = await response.json()
-                    console.log('response data?', data)
-                    setItems(data);
-                } catch (error) {
-                    setError("Error happened where it shouldn`t!");
+            .then(async response => await response.json())
+            .then(
+                (result) => {
+                    console.log("data successfully retrieved")
+                    setItems(result)
+                },
+                (error) => {
+                    console.log("OBACHT! ERROR")
+                    setError("Error happened where it shouldn`t!")
                 }
-            })
+            )
     }
 
     const makeIntentionalError = () => {
         const url = "not/a/real/url"
         fetch(url)
-            .then(async response => {
-                try {
-                    const data = await response.json()
-                    console.log('response data?', data)
-                    setItems(data);
-                } catch (error) {
+            .then(async response => await response.json())
+            .then(
+                (result) => {
+                    console.log("data successfully retrieved")
+                    setItems(result)
+                },
+                (error) => {
+                    console.log("OBACHT! ERROR")
                     setError("We tried to access /not/a/real/url which doesn`t exist, therefore the error is thrown. "
                         + "Check the console for more information.");
                 }
-            })
+            )
     }
 
     const resetData = () => {
