@@ -70,3 +70,24 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+
+//automatically cache http-requests in a seperate cache
+self.onfetch = function (event) {
+  event.respondWith(
+    (async function () {
+      var cache = await caches.open("request-cache");
+      var cachedFiles = await cache.match(event.request);
+      if (cachedFiles) {
+        return cachedFiles;
+      } else {
+        try {
+          var response = await fetch(event.request);
+          await cache.put(event.request, response.clone());
+          return response;
+        } catch (e) {
+          console.log("Error while caching request")
+        }
+      }
+    }())
+  );
+}
