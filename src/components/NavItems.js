@@ -1,3 +1,4 @@
+//NavItem data for the NavBar-Component
 export const NavItems = [
     {
         path: "/",

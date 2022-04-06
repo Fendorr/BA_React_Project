@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from './components/NavBar';
 import GridExample from "./pages/GridExample"
@@ -10,7 +10,7 @@ import HTTPRequests from './pages/HTTPRequests';
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<NavBar />}>
             <Route index element={<GridExample />} />
@@ -19,7 +19,7 @@ function App() {
             <Route path="/http" element={<HTTPRequests />} />
           </Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
