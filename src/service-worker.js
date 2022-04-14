@@ -79,7 +79,8 @@ self.onfetch = function (event) {
       var cachedFiles = await cache.match(event.request);
       if (cachedFiles) {
         return cachedFiles;
-      } else {
+      }
+      else {
         try {
           var response = await fetch(event.request);
           await cache.put(event.request, response.clone());

@@ -9,6 +9,7 @@ const CustomButton = styled(Button)({
     color: "rgba(0,0,0,.87)",
     backgroundColor: "#fff",
     textTransform: "none",
+    marginBottom: "20px",
     '&:hover': {
         backgroundColor: '#fff',
     }
@@ -31,12 +32,6 @@ function HTTPRequests() {
     const url = "dummyData.json"
     const [error, setError] = useState("");
     const [items, setItems] = useState([]);
-
-    // const getData = () => {
-    //     fetch("dummyData.json")
-    //         .then(async response => await response.json())
-    //         .then(data => console.log(data));
-    // }
 
     const getData = () => {
         fetch(url)
@@ -98,7 +93,7 @@ function HTTPRequests() {
                 <CustomButton variant="contained" onClick={makeError}>makeError</CustomButton>
             </GridBox>
 
-            {items !== null &&
+            {items.length !== 0 &&
                 <ul>
                     {items.map(item => (
                         <li key={item.id}>
@@ -111,7 +106,7 @@ function HTTPRequests() {
                 </ul>
             }
 
-            {error !== "" &&
+            {error &&
                 <div>Error: {error}</div>
             }
         </Box>

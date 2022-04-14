@@ -136,6 +136,7 @@ function NavBar() {
                     </Typography>
                 </Toolbar>
             </AppBar>
+            {/* Code for Drawer Element .. */}
             <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
                     <IconButton onClick={toggleDrawer}>
@@ -146,7 +147,8 @@ function NavBar() {
                 <List>
                     {NavItems.map((item, index) => {
                         return (
-                            <Link key={index} href={item.path} underline="none" color="inherit">
+                            <Link key={index} href={item.path} 
+                            underline="none" color="inherit">
                                 <ListItem button>
                                     <ListItemIcon>
                                         {renderIcon(item.icon)}
@@ -158,6 +160,7 @@ function NavBar() {
                     })}
                 </List>
             </Drawer>
+            {/* Code for Drawer Element .. */}
             <Box sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
                 <Grid container direction="column" justifyContent="flex-start" alignItems="center">

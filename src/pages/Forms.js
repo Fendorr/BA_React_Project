@@ -77,15 +77,21 @@ function Forms() {
                         <Typography variant="h6" sx={{ fontWeight: 600 }}>Form</Typography>
                         <Typography variant="subtitle2" sx={{ color: "#9e9e9e" }}>Type something in the form and submit it</Typography>
                         <CardDivider />
-                        <form id="example-form" onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit}>
                             <div>
-                                <TextField label="Firstname" name="firstName" type="text" variant="filled" value={inputs.firstName || ""} onChange={handleInputChange} margin="dense" fullWidth />
+                                <TextField label="Firstname" name="firstName" type="text" 
+                                variant="filled" value={inputs.firstName || ""} onChange={handleInputChange} 
+                                margin="dense" fullWidth />
                             </div>
                             <div>
-                                <TextField label="Lastname" name="lastName" type="text" variant="filled" value={inputs.lastName || ""} onChange={handleInputChange} margin="dense" fullWidth />
+                                <TextField label="Lastname" name="lastName" type="text" 
+                                variant="filled" value={inputs.lastName || ""} onChange={handleInputChange} 
+                                margin="dense" fullWidth />
                             </div>
                             <div>
-                                <TextField label="Age" name="age" type="number" variant="filled" value={inputs.age || ""} onChange={handleInputChange} margin="dense" fullWidth />
+                                <TextField label="Age" name="age" type="number" 
+                                variant="filled" value={inputs.age || ""} onChange={handleInputChange} 
+                                margin="dense" fullWidth />
                             </div>
                             <br />
                             <p>isSubmitted: {isSubmitted.toString()}</p>

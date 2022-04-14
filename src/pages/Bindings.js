@@ -9,7 +9,6 @@ import Divider from '@mui/material/Divider';
 import PropsShowcase from '../components/PropsShowcase';
 import EventShowcase from '../components/EventShowcase';
 import SeperateBindingExample from '../components/SeperateBindingExample';
-import { blueGrey, grey } from '@mui/material/colors';
 
 //#region styling
 const CustomCard = styled(Card)({
@@ -62,7 +61,7 @@ function Bindings(props) {
             <CustomCard variant="outlined">
                 <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>Send data from parent to child</Typography>
-                    <Typography variant="subtitle2" sx={{ color: "#9e9e9e" }}>showcases communication between components props</Typography>
+                    <Typography variant="subtitle2" sx={{ color: "#9e9e9e" }}>showcases communication between components using props</Typography>
                     <CardDivider />
                     <PropsShowcase name={name} />
                 </CardContent>
