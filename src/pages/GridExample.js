@@ -5,14 +5,14 @@ import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 
 //#region img-imports
-import doggo1 from "../images/doggo1.jpg";
-import doggo2 from "../images/doggo2.jpg";
+import doggo1 from "../images/doggo1.webp";
+import doggo2 from "../images/doggo2.webp";
 import doggo3 from "../images/doggo3.webp";
-import doggo4 from "../images/doggo4.jpg";
-import doggo5 from "../images/doggo5.jpeg";
-import robbenbaby1 from "../images/robbenbaby1.jpg";
-import robbenbaby2 from "../images/robbenbaby2.jpg";
-import robbenbaby4 from "../images/robbenbaby4.jpg";
+import doggo4 from "../images/doggo4.webp";
+import doggo5 from "../images/doggo5.webp";
+import robbenbaby1 from "../images/robbenbaby1.webp";
+import robbenbaby2 from "../images/robbenbaby2.webp";
+import robbenbaby4 from "../images/robbenbaby4.webp";
 //#endregion
 
 //#region styling

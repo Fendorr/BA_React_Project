@@ -106,7 +106,7 @@ function HTTPRequests() {
                 </ul>
             }
 
-            {error &&
+            {error !== "" &&
                 <div>Error: {error}</div>
             }
         </Box>
